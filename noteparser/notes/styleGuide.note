@@ -8,6 +8,7 @@ Top-level title
 			* *Italic*
 			* **Bold**
 			* _Underlined_
+			* --strikethrough--
 
 		> Some say that you can insert blockquotes using angle brackets
 			Blockquoting requires a space after the angle bracket
