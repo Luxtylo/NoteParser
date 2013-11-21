@@ -1,0 +1,36 @@
+Example note
+	This is an example note, which will be added to as I add new features. Eventually it should be able to be properly converted by NoteParser into whatever output file it makes.
+
+Top-level title
+	Subtitle
+		Notes go at this level and more indented levels.
+		Basic formatting includes making things:
+			* *Italic*
+			* **Bold**
+			* _Underlined_
+
+		> Some say that you can insert blockquotes using angle brackets
+			Blockquoting requires a space after the angle bracket
+		And that special inline quotes can be """inserted""" using triple '''quotation marks''' of either kind.
+
+		A double linebreak makes a new paragraph,
+		and single linebreaks are treated as new lines in the same paragraph
+
+		Equations can be inserted using square brackets:
+			> [x^2 + E_(kmax) = 7]
+				As you can see, quoted equations are not formatted by NoteParser
+			[x^2 + E_(kmax) = 7]
+				This is what the equation looks like when formatted
+				A single-character exponent does not require brackets around it. A multi-char exponent will.
+					> [x^2 + y^(2x)]
+					[x^2 + y^(2x)]
+
+			> [A = [pi]r^2]
+			[A = [pi]r^2]
+				A set of defined scientific and mathematical characters will be able to be inserted using their English names in square brackets when in an equation. To make them inline in text, the equation will need to be placed inline with the text, eg """pi""" makes [[pi]]
+
+			> [This is an equation on its own line]
+			> This is an [inline equation]
+			[This is an equation on its own line]
+			This is an [inline equation]
+				As you can see, inline equations are treated differently to standalone equations.
