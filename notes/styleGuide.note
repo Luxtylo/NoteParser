@@ -19,7 +19,6 @@ Top-level title
 		Equations can be inserted using square brackets:
 			> [x^2 + E_(kmax) = 7]
 				As you can see, quoted equations are not formatted by NoteParser
-
 			[x^2 + E_(kmax) = 7]
 				This is what the equation looks like when formatted
 				A single-character exponent does not require brackets around it. A multi-char exponent will.
@@ -28,7 +27,7 @@ Top-level title
 
 			> [A = [pi]r^2]
 			[A = [pi]r^2]
-				A set of defined scientific and mathematical characters will be able to be inserted using their English names in square brackets when in an equation. To make them inline in text, the equation will need to be placed inline with the text, eg [[pi]]
+				A set of defined scientific and mathematical characters will be able to be inserted using their English names in square brackets when in an equation. To make them inline in text, the equation will need to be placed inline with the text, eg """pi""" makes [[pi]]
 
 			> [This is an equation on its own line]
 			> This is an [inline equation]
