@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 """
 
 NoteParser - A simple Python script to parse my Note Markup Language
@@ -13,7 +11,22 @@ You should have received a copy of the GNU General Public License along with thi
 
 """
 
-# Imports
-import defs
+# Definitions for NoteParser
+italicTag = "*"
+boldTag = "**"
+underlineTag = "_"
+strikethroughTag = "--"
 
-print(defs.symbolDict["pi"])
+bulletTag = "* " 		# At start of line
+blockTag = "> " 	# At start of line
+quoteTags = ["\"\"\"", "\'\'\'", "```"]
+
+equationTags = ["[", "]"]
+exponentTags = ["^(", ")"]
+exponentSingleTag = "^"
+baseTags = ["_(", ")"]
+baseSingleTag = "_"
+
+symbolDict = {
+	"pi": "\N{GREEK SMALL LETTER PI}"
+}
