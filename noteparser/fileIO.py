@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 """
 
 NoteParser - A simple Python script to parse my Note Markup Language
@@ -13,12 +11,17 @@ You should have received a copy of the GNU General Public License along with thi
 
 """
 
-# Imports
-import defs
-import fileIO
+import os
 
-print(defs.symbolDict["pi"])
+if os.name == "posix":
+	slashChar = "/"
+elif os.name == "nt":
+	slashChar = "\\"
+else:
+	print("OS may be unsupported")
+	slashChar = "/"
 
-fileIO.inputFile.write(defs.symbolDict["pi"])
+cwd = os.getcwd() + slashChar
+notesDir = cwd + "notes/"
 
-fileIO.inputFile.close()
+inputFile = open(notesDir + "test.note", "w+")
