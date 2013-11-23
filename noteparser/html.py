@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 """
 
 NoteParser - A simple Python script to parse my Note Markup Language
@@ -13,9 +11,5 @@ You should have received a copy of the GNU General Public License along with thi
 
 """
 
-# Imports
-import defs, fileIO, html
-
-fileIO.io.writeLine("Success!")
-
-fileIO.io.close()
+header = "<html>\n\t<head>\n\t\t<title>%s</title>\n\t</head>\n\t<body>"
+footer = "\n\t</body>\n</html>"

@@ -12,6 +12,7 @@ You should have received a copy of the GNU General Public License along with thi
 """
 
 import os
+import html
 
 if os.name == "posix":
 	slashChar = "/"
@@ -21,7 +22,32 @@ else:
 	print("OS may be unsupported")
 	slashChar = "/"
 
-cwd = os.getcwd() + slashChar
-notesDir = cwd + "notes/"
+class files():
+	def __init__(self, inputName, outputName):
+		cwd = os.getcwd() + slashChar
+		notesDir = cwd + "notes" + slashChar
 
-inputFile = open(notesDir + "test.note", "w+")
+		self.inputFileName = str(inputName)
+		self.outputFileName = str(outputName)
+
+		self.inputFile = open(notesDir + self.inputFileName, "r")
+		self.outputFile = open(notesDir + self.outputFileName, "w+")
+
+		self.outputFile.write(html.header % inputName)
+
+	def read(self):
+		return self.inputFile
+
+	def write(self, text):
+		self.outputFile.write(str(text))
+
+	def writeLine(self, line):
+		self.outputFile.write("\n\t\t" + str(line))
+
+	def close(self):
+		self.inputFile.close()
+
+		self.writeLine(html.footer)
+		self.outputFile.close()
+
+io = files("styleGuide.note", "test.note")
